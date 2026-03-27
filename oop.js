@@ -123,3 +123,5 @@ class Rectangle extends Shape {
 
 let shapes = [new Circle(5), new Rectangle(4, 6)];
 shapes.forEach(shape => shape.area());
+
+
