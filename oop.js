@@ -65,3 +65,26 @@ let myAccount = new BankAccount("Ali", 1000);
 myAccount.deposit(500);
 myAccount.withdraw(200);
 console.log("Balance:", myAccount.getBalance());
+
+//Inheritance
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log(this.name + " is eating");
+  }
+}
+
+// Dog class inherits from Animal
+class Dog extends Animal {
+  bark() {
+    console.log(this.name + " is barking");
+  }
+}
+
+let dog1 = new Dog("Tommy");
+dog1.eat();  // inherited from Animal
+dog1.bark(); // specific to Dog
