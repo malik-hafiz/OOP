@@ -88,3 +88,38 @@ class Dog extends Animal {
 let dog1 = new Dog("Tommy");
 dog1.eat();  // inherited from Animal
 dog1.bark(); // specific to Dog
+
+
+//Polymorphism
+
+class Shape {
+  area() {
+    console.log("Area method for generic shape");
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  area() {
+    console.log("Circle area: " + (Math.PI * this.radius * this.radius));
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(width, height) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+
+  area() {
+    console.log("Rectangle area: " + (this.width * this.height));
+  }
+}
+
+let shapes = [new Circle(5), new Rectangle(4, 6)];
+shapes.forEach(shape => shape.area());
